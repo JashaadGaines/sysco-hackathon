@@ -1,12 +1,20 @@
 [
     {
         "id": 1388534400000,
-        "author": "Pete Hunt",
+        "customer": "Applebee's",
+        "opco": "073",
         "text": "Hey there!"
     },
     {
         "id": 1420070400000,
-        "author": "Paul O’Shannessy",
+        "customer": "Marriott Hotel",
+        "opco": "056",
         "text": "React is *great*!"
+    },
+    {
+        "id": 1471880513514,
+        "customer": "Ted's Cheesesteaks",
+        "opco": "021",
+        "text": "Definitely"
     }
 ]
