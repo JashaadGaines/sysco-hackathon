@@ -1,5 +1,5 @@
 
-var Comment = React.createClass({
+var OrderAlert = React.createClass({
   rawMarkup: function() {
     var md = new Remarkable();
     var rawMarkup = md.render(this.props.children.toString());
@@ -18,7 +18,7 @@ var Comment = React.createClass({
   }
 });
 
-var CommentBox = React.createClass({
+var OrderAlertView = React.createClass({
   loadCommentsFromServer: function() {
     $.ajax({
       url: this.props.url,
@@ -63,78 +63,36 @@ var CommentBox = React.createClass({
   },
   render: function() {
     return (
-      <div className="commentBox">
+      <div className="orderAlertView">
         <h1>Order Alerts</h1>
-        <CommentList data={this.state.data} />
-        <CommentForm onCommentSubmit={this.handleCommentSubmit} />
+        <OrderAlertsList data={this.state.data} />
       </div>
     );
   }
 });
 
-var CommentList = React.createClass({
+var OrderAlertsList = React.createClass({
   render: function() {
-    var commentNodes = this.props.data.map(function(orderAlert) {
+    var orderAlertNodes = this.props.data.map(function(orderAlert) {
       return (
-        <Comment
+        <OrderAlert
           customer={orderAlert.customer}
           key={orderAlert.opco}
           opco={orderAlert.opco}
         >
           {orderAlert.text}
-        </Comment>
+        </OrderAlert>
       );
     });
     return (
-      <div className="commentList">
-        {commentNodes}
+      <div className="orderAlertsList">
+        {orderAlertNodes}
       </div>
     );
   }
 });
 
-var CommentForm = React.createClass({
-  getInitialState: function() {
-    return {author: '', text: ''};
-  },
-  handleAuthorChange: function(e) {
-    this.setState({author: e.target.value});
-  },
-  handleTextChange: function(e) {
-    this.setState({text: e.target.value});
-  },
-  handleSubmit: function(e) {
-    e.preventDefault();
-    var author = this.state.author.trim();
-    var text = this.state.text.trim();
-    if (!text || !author) {
-      return;
-    }
-    this.props.onCommentSubmit({author: author, text: text});
-    this.setState({author: '', text: ''});
-  },
-  render: function() {
-    return (
-      <form className="commentForm" onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          placeholder="Your name"
-          value={this.state.author}
-          onChange={this.handleAuthorChange}
-        />
-        <input
-          type="text"
-          placeholder="Say something..."
-          value={this.state.text}
-          onChange={this.handleTextChange}
-        />
-        <input type="submit" value="Post" />
-      </form>
-    );
-  }
-});
-
 ReactDOM.render(
-  <CommentBox url="/api/comments" pollInterval={10000} />,
+  <OrderAlertView url="/api/order-alerts" pollInterval={10000} />,
   document.getElementById('content')
 );
