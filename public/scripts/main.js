@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import UserAvatar from './UserAvatar';
+import App from './App';
 
-const App = () => (
+const Main = () => (
     <MuiThemeProvider>
-        <UserAvatar />
+        <App />
     </MuiThemeProvider>
 );
 
 ReactDOM.render(
-    <App />,
+    <Main />,
     document.getElementById('app')
 );
