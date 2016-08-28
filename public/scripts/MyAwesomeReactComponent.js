@@ -1,8 +1,11 @@
 import React from 'react';
-import RaisedButton from 'material-ui/RaisedButton';
+import Avatar from 'material-ui/Avatar';
 
 const MyAwesomeReactComponent = () => (
-    <RaisedButton label="Default" />
+    <div>
+        <Avatar src="assets/random_guy.png" />
+        <span>MA - 121</span>
+    </div>
 );
 
 export default MyAwesomeReactComponent;
