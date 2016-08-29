@@ -4,7 +4,7 @@ import Subheader from 'material-ui/Subheader';
 
 const subheader = () => (
     <div>
-        <Subheader>My Customers</Subheader>
+        <h3>My Customers</h3>
     </div>
 );
 
