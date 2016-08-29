@@ -2,6 +2,7 @@ import React from 'react';
 import UserAvatar from './UserAvatar';
 import CustomerSubheader from './CustomerSubheader';
 import CustomerList from './CustomerList';
+import {Router, Route, hashHistory } from 'react-router'
 
 class App extends React.Component {
     render() {

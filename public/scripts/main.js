@@ -2,15 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import App from './App';
-import {Router, Route, hashHistory } from 'react-router'
 
-
-const Main = () =>
-<Router history={hashHistory}>
+const Main = () => (
     <MuiThemeProvider>
-        <Route path="/" component={App}/>
+        <App />
     </MuiThemeProvider>
-</Router>
 );
 
 ReactDOM.render(
