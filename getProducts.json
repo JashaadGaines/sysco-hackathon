@@ -24,7 +24,7 @@
 		"avgPieces": 3.9,
 		"weeksOrdered": 5,
 		"currentOrder": 0,
-		"status": "Red"
+		"status": "RED"
 	},
 	{
 		"supc": "4689212",
@@ -47,7 +47,7 @@
 		"avgPieces": 1,
 		"weeksOrdered": 5,
 		"currentOrder": 0,
-		"status": "Green"
+		"status": "GREEN"
 	},
 	{
 		"supc": "2000218",
@@ -70,7 +70,7 @@
 		"avgPieces": 3.9,
 		"weeksOrdered": 5,
 		"currentOrder": 2,
-		"status": "Yellow"
+		"status": "YELLOW"
 	},
 	{
 		"supc": "0413765",
@@ -93,7 +93,7 @@
 		"avgPieces": 3.9,
 		"weeksOrdered": 5,
 		"currentOrder": 0,
-		"status": "Red"
+		"status": "RED"
 	},
 	{
 		"supc": "5317553",
@@ -116,7 +116,7 @@
 		"avgPieces": 3.9,
 		"weeksOrdered": 5,
 		"currentOrder": 0,
-		"status": "Red"
+		"status": "RED"
 	},
 	{
 		"supc": "2048593",
@@ -139,7 +139,7 @@
 		"avgPieces": 3.9,
 		"weeksOrdered": 5,
 		"currentOrder": 0,
-		"status": "Red"
+		"status": "RED"
 	}
 	]
 }

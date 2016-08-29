@@ -15,7 +15,7 @@ class CustomerList extends React.Component {
             dataType: 'json',
             cache: false,
             success: function(data) {
-                this.setState({data: data.accounts});
+                this.setState({data: data.accountResp});
             }.bind(this),
             error: function(xhr, status, err) {
                 console.error(this.props.url, status, err.toString());
@@ -53,9 +53,9 @@ class CustomerList extends React.Component {
 
     urgencyOf(status) {
         var statusMap = {
-            'Red': 1,
-            'Yellow': 2,
-            'Green': 3,
+            "RED": 1,
+            "YELLOW": 2,
+            "GREEN": 3,
         }
 
         return statusMap[status] || 4;

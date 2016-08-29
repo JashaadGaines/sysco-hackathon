@@ -52,3 +52,11 @@
 .center-ul {
     margin: auto; !important;
 }
+
+caption h3{
+    color:white !important;
+}
+
+caption span{
+    color:white !important;
+}

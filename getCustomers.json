@@ -1,7 +1,7 @@
 {
 	"opco": "067",
 	"salesAssociate": "S2805",
-	"accounts": [
+	"accountResp": [
 	{
 		"opco": "067",
 		"customerShipTo": "000703",
@@ -12,19 +12,19 @@
 		"opco": "067",
 		"customerShipTo": "000315",
 		"customerName": "JM SMUCKER CO",
-		"status": "Green"
+		"status": "GREEN"
 	},
 	{
 		"opco": "067",
 		"customerShipTo": "002071",
 		"customerName": "MAR-JAC POULTRY INC *1",
-		"status": "Yellow"
+		"status": "YELLOW"
 	},
 	{
 		"opco": "067",
 		"customerShipTo": "000034",
 		"customerName": "Dennys",
-		"status": "Red"
+		"status": "RED"
 	}
 	]
 }

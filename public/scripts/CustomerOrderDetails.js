@@ -11,9 +11,9 @@ class CustomerOrderDetails extends React.Component {
 
     getOrderDetails(id){
         var LOCAL_URL = '/api/products/' + '000703';
-        const WEBSERVICE_URL= 'https://ojzqigoy7c.execute-api.us-east-1.amazonaws.com/custdetail/custdetail?opco=1&customerShipTo ';
+        const WEBSERVICE_URL= 'https://ojzqigoy7c.execute-api.us-east-1.amazonaws.com/custdetail/custdetail?opco=1&customerShipTo';
         $.ajax({
-            url: WEBSERVICE_URL,
+            url: LOCAL_URL,
             dataType: 'json',
             cache: false,
             success: function(data) {
@@ -36,14 +36,14 @@ class CustomerOrderDetails extends React.Component {
             return this.urgencyOf(curr.status) - this.urgencyOf(next.status);
         }).map((product) => {
             var statusMap = {
-                'Red': 'red_tomatoes.jpg',
-                'Yellow': 'yellow_lemons.jpeg',
-                'Green': 'scripts/green_limes.jpg',
+                "RED": 'red_tomatoes.jpg',
+                "YELLOW": 'yellow_lemons.jpeg',
+                "GREEN": 'scripts/green_limes.jpg',
             };
 
             function getUrl(){
                 var url = "url(";
-                if(!statusMap['status']){
+                if(!statusMap[product.status]){
                     return url + "nocolor_food.jpg" +")"
                 }
                 return  url + statusMap[product.status]+ ")"
@@ -59,11 +59,11 @@ class CustomerOrderDetails extends React.Component {
 
             return (
                 <div key={getRandomKey()}>
-                    <div className="col-sm-6 col-md-4 alert-card">
+                    <div className="col-sm-6 col-md-4 alert-card details">
                         <div className="thumbnail" style={backgroundImg}>
                             {/*<img src="/green_limes.jpg" alt="..."/>*/}
                                 <div className="caption">
-                                    <h3>{product.currentOrder} {product.size} pack of {product.description}</h3>
+                                    <h3>{product.currentOrder} {product.size} packs of {product.description}</h3>
                                 </div>
                             <span>Avg Qty Ordered: {product.avgPieces}</span>
                         </div>
@@ -84,9 +84,9 @@ class CustomerOrderDetails extends React.Component {
 
    urgencyOf(status) {
         var statusMap = {
-            'Red': 1,
-            'Yellow': 2,
-            'Green': 3,
+            "RED": 1,
+            "YELLOW": 2,
+            "GREEN": 3,
         }
 
         return statusMap[status] || 4;
