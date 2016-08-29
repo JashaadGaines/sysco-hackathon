@@ -1,7 +1,6 @@
 
 import React from 'react';
 import Customer from './Customer';
-import { Link } from 'react-router'
 
 class CustomerList extends React.Component {
 
@@ -34,7 +33,6 @@ class CustomerList extends React.Component {
             return this.urgencyOf(curr.status) - this.urgencyOf(next.status);
         }).map((data) => {
             return (
-                <Link to="/products" key={data.customerShipTo}>
                     <Customer name={data.customerName}
                               key={data.customerShipTo}
                               shipTo = {data.customerShipTo}
@@ -42,7 +40,6 @@ class CustomerList extends React.Component {
                               status={data.status}
                             >
                     </Customer>
-                </Link>
             );
         });
         return (

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router'
 
 class Customer extends React.Component {
     constructor(props){
@@ -7,9 +8,11 @@ class Customer extends React.Component {
 
     render(){
         return(
-            <div className="customer">
-                <h2 style={{color:this.props.status}}>{this.props.name}</h2>
-            </div>
+            <Link to="/products">
+                <div className="customer">
+                    <h2 style={{color:this.props.status}}>{this.props.name}</h2>
+                </div>
+            </Link>
         )
     }
 }
