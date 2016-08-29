@@ -8,7 +8,7 @@ class App extends React.Component {
         return(
             <div>
                 <UserAvatar />
-                <CustomerSubheader />
+                {/*<CustomerSubheader />*/}
                 <CustomerList url="/api/customers" pollInterval={30000}/>
             </div>
         )

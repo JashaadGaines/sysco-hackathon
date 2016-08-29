@@ -14,7 +14,7 @@ class Customer extends React.Component {
         }
 
         return(
-            <Link to="/products">
+            <Link to="/products" className="alert-card">
                 <div className={statusMap[this.props.status] || 'alert alert-info'}>
                     <h4 className="alert-heading">{this.props.name}</h4>
                 </div>

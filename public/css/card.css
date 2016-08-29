@@ -32,3 +32,11 @@
 .page-header {
     text-align: center;
 }
+
+.alert-card {
+    margin: auto;
+}
+
+.avatar {
+    background-image: url("../assets/LinedAvatarCircle.png");
+}

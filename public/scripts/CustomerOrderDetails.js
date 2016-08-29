@@ -32,18 +32,25 @@ class CustomerOrderDetails extends React.Component {
         var productNodes = this.state.data.sort((curr,next)=>{
             return this.urgencyOf(curr.status) - this.urgencyOf(next.status);
         }).map((product) => {
+            var statusMap = {
+                'Red': 'alert alert-danger',
+                'Yellow': 'alert alert-warning',
+                'Green': 'alert alert-success',
+            };
+
             return (
-            <li style={{color: product.status}}>
+            <div className={statusMap[product.status] || 'alert alert-info'}>
                 <span>{product['size']} of </span>
                 <span>{product.description}</span>
                 <span> Avg: Order size: {product.avgPieces}</span>
-            </li>
+            </div>
             );
         });
        return (
            <div>
                <Link to="/">Back</Link>
                <div className="customerOrderDetails">
+                   <h4 className="page-header">Product Alerts</h4>
                    <ul>
                        {productNodes}
                    </ul>
