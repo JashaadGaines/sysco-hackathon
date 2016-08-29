@@ -34,9 +34,17 @@
 }
 
 .alert-card {
-    margin: auto;
-}
+    margin: 1em 3em 1em 1em; !important;
+ }
 
 .avatar {
     background-image: url("../assets/LinedAvatarCircle.png");
+}
+
+* {
+    border-radius: 0 !important;
+}
+
+.alert-heading {
+ text-align: center;
 }

@@ -1,15 +1,15 @@
 import React from 'react';
 import UserAvatar from './UserAvatar';
-import CustomerSubheader from './CustomerSubheader';
 import CustomerList from './CustomerList';
 
 class App extends React.Component {
     render() {
+        const URL = "/api/customers";
+        const WEBSERVICE_URL = "https://joltvpa401.execute-api.us-east-1.amazonaws.com/CustList";
         return(
             <div>
                 <UserAvatar />
-                {/*<CustomerSubheader />*/}
-                <CustomerList url="/api/customers" pollInterval={30000}/>
+                <CustomerList url={URL} pollInterval={30000}/>
             </div>
         )
     }

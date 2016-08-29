@@ -8,14 +8,14 @@ class Customer extends React.Component {
 
     render(){
         var statusMap = {
-            'Red': 'alert alert-danger',
-            'Yellow': 'alert alert-warning',
-            'Green': 'alert alert-success',
+            'Red': 'alert alert-danger alert-card',
+            'Yellow': 'alert alert-warning alert-card',
+            'Green': 'alert alert-success alert-card',
         }
 
         return(
             <Link to="/products" className="alert-card">
-                <div className={statusMap[this.props.status] || 'alert alert-info'}>
+                <div className={statusMap[this.props.status] || 'alert alert-info alert-carde'}>
                     <h4 className="alert-heading">{this.props.name}</h4>
                 </div>
             </Link>
