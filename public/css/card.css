@@ -38,7 +38,7 @@
  }
 
 .avatar {
-    background-image: url("../assets/LinedAvatarCircle.png");
+    background-image: url("../LinedAvatarCircle.png");
 }
 
 * {
@@ -47,4 +47,8 @@
 
 .alert-heading {
  text-align: center;
+}
+
+.center-ul {
+    margin: auto; !important;
 }

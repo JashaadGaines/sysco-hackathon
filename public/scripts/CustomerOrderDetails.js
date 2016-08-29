@@ -33,17 +33,31 @@ class CustomerOrderDetails extends React.Component {
             return this.urgencyOf(curr.status) - this.urgencyOf(next.status);
         }).map((product) => {
             var statusMap = {
-                'Red': 'alert alert-danger',
-                'Yellow': 'alert alert-warning',
-                'Green': 'alert alert-success',
+                'Red': 'red_tomatoes.jpg',
+                'Yellow': 'yellow_lemons.jpeg',
+                'Green': 'scripts/green_limes.jpg',
             };
 
+            function getUrl(){
+                return "url(" + statusMap[product.status]+ ")"
+            }
+
+            var backgroundImg = {
+                backgroundImage: getUrl()
+            }
+
             return (
-            <div className={statusMap[product.status] || 'alert alert-info'}>
-                <span>{product['size']} of </span>
-                <span>{product.description}</span>
-                <span> Avg: Order size: {product.avgPieces}</span>
-            </div>
+                <div className="row" key={product.supc}>
+                    <div className="col-sm-6 col-md-4 alert-card">
+                        <div className="thumbnail" style={backgroundImg}>
+                            {/*<img src="/green_limes.jpg" alt="..."/>*/}
+                                <div className="caption">
+                                    <h3>{product.currentOrder} {product.size} pack of {product.description}</h3>
+                                </div>
+                            <span>Avg Qty Ordered: {product.avgPieces}</span>
+                        </div>
+                    </div>
+                </div>
             );
         });
        return (
@@ -51,7 +65,7 @@ class CustomerOrderDetails extends React.Component {
                <Link to="/">Back</Link>
                <div className="customerOrderDetails">
                    <h4 className="page-header">Product Alerts</h4>
-                   <ul>
+                   <ul className="center-ul">
                        {productNodes}
                    </ul>
                </div>
