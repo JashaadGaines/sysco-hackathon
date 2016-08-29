@@ -28,3 +28,7 @@
         padding: 16px 8px;
         background-color: #fafafa;
 }
+
+.page-header {
+    text-align: center;
+}

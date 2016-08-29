@@ -18,7 +18,6 @@ class Customer extends React.Component {
                 <div className={statusMap[this.props.status] || 'alert alert-info'}>
                     <h4 className="alert-heading">{this.props.name}</h4>
                 </div>
-                {/*<h2 style={{color:this.props.status}}>{this.props.name}</h2>*/}
             </Link>
         )
     }
