@@ -8,7 +8,7 @@ class Customer extends React.Component {
     render(){
         return(
             <div className="customer">
-                <h2>{this.props.name} - {this.props.opco}</h2>
+                <h2 style={{color:this.props.status}}>{this.props.name}</h2>
             </div>
         )
     }

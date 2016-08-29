@@ -7,7 +7,7 @@ const App = () => (
     <div>
         <UserAvatar />
         <CustomerSubheader />
-        <CustomerList url="/api/order-alerts" pollInterval={2000}/>
+        <CustomerList url="/api/customers" pollInterval={2000}/>
     </div>
 );
 

@@ -1,0 +1,190 @@
+## Customer Listing Request ##
+{
+	"opco": "067",
+	"salesAssociate": "S2805"
+}
+
+## Customer Listing Response ##
+{
+	"opco": "067",
+	"salesAssociate": "S2805",
+	"accounts": [
+	{
+		"opco": "067",
+		"customerShipTo": "000703",
+		"customerName": "THE CROSSING",
+		"status": "No Order Submitted... Yet"
+	},
+	{
+		"opco": "067",
+		"customerShipTo": "000315",
+		"customerName": "JM SMUCKER CO",
+		"status": "Green"
+	},
+	{
+		"opco": "067",
+		"customerShipTo": "002071",
+		"customerName": "MAR-JAC POULTRY INC *1",
+		"status": "Yellow"
+	},
+	{
+		"opco": "067",
+		"customerShipTo": "000034",
+		"customerName": "Dennys",
+		"status": "Red"
+	}
+	]
+}
+
+## Customer Item List Listing Request ##
+{
+	"opco": "067",
+	"salesAssociate": "S2805",
+	"customerShipTo": "000703"
+}
+## Customer Item List Listing Response ##
+{
+	"opco": "067",
+	"salesAssociate": "S2805",
+	"customerShipTo": "000703",
+	"products": [
+	{
+		"supc": "1182237",
+		"pack": "1",
+		"size": "10 LB",
+		"brand": "SYS CLS",
+		"description": "MUSHROOM FOODSERVICE FRESH",
+		"split": " ",
+		"category": 4,
+		"week1": 10,
+		"week2": 0,
+		"week3": 9,
+		"week4": 0,
+		"week5": 0,
+		"week6": 3,
+		"week7": 5,
+		"week8": 12,
+		"sumPieces": 39,
+		"sumOrders": 10,
+		"avgPieces": 3.9,
+		"weeksOrdered": 5,
+		"currentOrder": 0,
+		"status": "Red"
+	},
+	{
+		"supc": "4689212",
+		"pack": "12",
+		"size": "13 OZ",
+		"brand": "AREZZIO",
+		"description": "ANCHOVY FILET EASY OPEN TIN OO",
+		"split": "S",
+		"category": 5,
+		"week1": 1,
+		"week2": 0,
+		"week3": 1,
+		"week4": 0,
+		"week5": 0,
+		"week6": 1,
+		"week7": 1,
+		"week8": 2,
+		"sumPieces": 6,
+		"sumOrders": 6,
+		"avgPieces": 1,
+		"weeksOrdered": 5,
+		"currentOrder": 0,
+		"status": "Green"
+	},
+	{
+		"supc": "2000218",
+		"pack": "2",
+		"size": "5LB",
+		"brand": "SYS IMP",
+		"description": "POTATO FRY 3/8 LONG SPCY",
+		"split": " ",
+		"category": 7,
+		"week1": 10,
+		"week2": 0,
+		"week3": 9,
+		"week4": 0,
+		"week5": 0,
+		"week6": 3,
+		"week7": 5,
+		"week8": 12,
+		"sumPieces": 39,
+		"sumOrders": 10,
+		"avgPieces": 3.9,
+		"weeksOrdered": 5,
+		"currentOrder": 2,
+		"status": "Yellow"
+	},
+	{
+		"supc": "0413765",
+		"pack": "30",
+		"size": "1LB",
+		"brand": "WHLFCLS",
+		"description": "MARGARINE SOLID CRN OIL",
+		"split": " ",
+		"category": 3,
+		"week1": 10,
+		"week2": 0,
+		"week3": 9,
+		"week4": 0,
+		"week5": 0,
+		"week6": 3,
+		"week7": 5,
+		"week8": 12,
+		"sumPieces": 39,
+		"sumOrders": 10,
+		"avgPieces": 3.9,
+		"weeksOrdered": 5,
+		"currentOrder": 0,
+		"status": "Red"
+	},
+	{
+		"supc": "5317553",
+		"pack": "4",
+		"size": "100CT",
+		"brand": "FDHNDLR",
+		"description": "GLOVE NITRILE FORMFLEX LG",
+		"split": " ",
+		"category": 12,
+		"week1": 10,
+		"week2": 0,
+		"week3": 9,
+		"week4": 0,
+		"week5": 0,
+		"week6": 3,
+		"week7": 5,
+		"week8": 12,
+		"sumPieces": 39,
+		"sumOrders": 10,
+		"avgPieces": 3.9,
+		"weeksOrdered": 5,
+		"currentOrder": 0,
+		"status": "Red"
+	},
+	{
+		"supc": "2048593",
+		"pack": "200",
+		"size": "3.5 GM",
+		"brand": "AREZZIO",
+		"description": "CHEESE PARMESAN GRTD",
+		"split": " ",
+		"category": 10,
+		"week1": 10,
+		"week2": 0,
+		"week3": 9,
+		"week4": 0,
+		"week5": 0,
+		"week6": 3,
+		"week7": 5,
+		"week8": 12,
+		"sumPieces": 39,
+		"sumOrders": 10,
+		"avgPieces": 3.9,
+		"weeksOrdered": 5,
+		"currentOrder": 0,
+		"status": "Red"
+	}
+	]
+}
