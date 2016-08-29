@@ -44,7 +44,9 @@ class CustomerList extends React.Component {
         });
         return (
             <div className="customerList">
-                {customerNodes}
+                <ul>
+                    {customerNodes}
+                </ul>
             </div>
         )
     }

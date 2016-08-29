@@ -20,8 +20,8 @@
     padding: 15px;
 }
 
-.cardhead > h3,h4 {
-    color: #000;
+.cardhead > h1,h2 {
+    color: #FFFFF0;
 }
 
 .cardhead.cardcontent {

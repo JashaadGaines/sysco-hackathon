@@ -9,7 +9,7 @@ class App extends React.Component {
             <div>
                 <UserAvatar />
                 <CustomerSubheader />
-                <CustomerList url="/api/customers" pollInterval={2000}/>
+                <CustomerList url="/api/customers" pollInterval={30000}/>
             </div>
         )
     }
