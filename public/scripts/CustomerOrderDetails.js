@@ -10,14 +10,17 @@ class CustomerOrderDetails extends React.Component {
     }
 
     getOrderDetails(id){
+        var LOCAL_URL = '/api/products/' + '000703';
+        const WEBSERVICE_URL= 'https://ojzqigoy7c.execute-api.us-east-1.amazonaws.com/custdetail/custdetail?opco=1&customerShipTo ';
         $.ajax({
-            url: '/api/products/' + '000703',
+            url: WEBSERVICE_URL,
             dataType: 'json',
             cache: false,
             success: function(data) {
                 this.setState({data: data.products});
             }.bind(this),
             error: function(xhr, status, err) {
+                alert('ERROR: Unable to fetch data' + this.props.url);
                 console.error(this.props.url, status, err.toString());
             }.bind(this)
         });
@@ -39,15 +42,23 @@ class CustomerOrderDetails extends React.Component {
             };
 
             function getUrl(){
-                return "url(" + statusMap[product.status]+ ")"
+                var url = "url(";
+                if(!statusMap['status']){
+                    return url + "nocolor_food.jpg" +")"
+                }
+                return  url + statusMap[product.status]+ ")"
             }
 
             var backgroundImg = {
                 backgroundImage: getUrl()
             }
 
+            function getRandomKey() {
+                return product.supc + Math.random();
+            }
+
             return (
-                <div className="row" key={product.supc}>
+                <div key={getRandomKey()}>
                     <div className="col-sm-6 col-md-4 alert-card">
                         <div className="thumbnail" style={backgroundImg}>
                             {/*<img src="/green_limes.jpg" alt="..."/>*/}
@@ -65,9 +76,7 @@ class CustomerOrderDetails extends React.Component {
                <Link to="/">Back</Link>
                <div className="customerOrderDetails">
                    <h4 className="page-header">Product Alerts</h4>
-                   <ul className="center-ul">
                        {productNodes}
-                   </ul>
                </div>
            </div>
        )
