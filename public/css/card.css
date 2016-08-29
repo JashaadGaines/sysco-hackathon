@@ -1,0 +1,30 @@
+.card3 {
+  margin-bottom: 30px;
+}
+
+.card3 > div {
+  max-width: 450px;
+  margin: 0 auto;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.cardhead {
+  background-color: #eee;
+  border-radius: 4px 4px 0px 0px;
+  overflow: hidden;
+}
+
+.cardhead > img {
+    margin: 0 auto;
+    padding: 15px;
+}
+
+.cardhead > h3,h4 {
+    color: #000;
+}
+
+.cardhead.cardcontent {
+        padding: 16px 8px;
+        background-color: #fafafa;
+}
